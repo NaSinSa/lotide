@@ -15,12 +15,16 @@ const eqObjects = function(object1, object2) {
     return false;
   }
   for (let key in object1) {
-    if (Array.isArray(object1[key])) {
-      if (!eqArrays(object1[key], object2[key])) {
+    let firstCheck = object1[key];
+    let secondCheck = object2[key];
+    if (Array.isArray(firstCheck)) {
+      if (!eqArrays(firstCheck, secondCheck)) {
         return false;
       }
-    } else if (object1[key] !== object2[key]) {
+    } else if (typeof firstCheck !== "object" && firstCheck !== secondCheck) {
       return false;
+    } else {
+      return eqObjects(firstCheck, secondCheck);
     }
   }
   return true;
