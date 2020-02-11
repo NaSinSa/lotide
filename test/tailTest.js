@@ -1,10 +1,10 @@
-const assertEqual = require("../assertEqual");
+// const assertEqual = require("../assertEqual");
 const tail = require("../tail");
 const assert = require('chai').assert;
 
-const words = [];
-console.log(tail(words));
-console.log(assertEqual(words.length, 0));
+// const words = [];
+// console.log(tail(words));
+// console.log(assertEqual(words.length, 0));
 
 describe("#tail", () => {
   it("should return 'goodbye' and 'See ya later'", () => {

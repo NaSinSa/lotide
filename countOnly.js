@@ -1,6 +1,7 @@
-const assertEqual = function(actual, expected) {
-  return (actual === expected) ? (`✔✔✔ Assertion Passed: ${actual} === ${expected}`) : (`💥💥💥 Assertion Failed: ${actual} !== ${expected}`);
-};
+// const assertEqual = function(actual, expected) {
+//   return (actual === expected) ? (`✔✔✔ Assertion Passed: ${actual} === ${expected}`) : (`💥💥💥 Assertion Failed: ${actual} !== ${expected}`);
+// };
+
 
 const countOnly = function(allItems, itemsToCount) {
   let countedItems = {};
@@ -13,3 +14,5 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return countedItems;
 };
+
+module.exports = countOnly;
